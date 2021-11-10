@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import rospy
 import time
 import panda_driver_motors as pdm
@@ -41,6 +43,11 @@ if __name__ == '__main__':
     try:
         listener()
     except KeyboardInterrupt:
+        motor_right_front.shutdown()                                                                        
+        motor_right_back.shutdown()                                                                         
+        motor_left_front.shutdown()                                                                         
+        motor_left_back.shutdown()
+    except rospy.ROSInterruptException:
         motor_right_front.shutdown()                                                                        
         motor_right_back.shutdown()                                                                         
         motor_left_front.shutdown()                                                                         
