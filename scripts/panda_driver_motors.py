@@ -4,7 +4,7 @@ import time
 pca9685 = PCA9685.PCA9685()
 
 PWM_DUTY = 80
-PWM_FREQ = 500
+PWM_FREQ = 400
 
 right_front_EN = 0
 right_front_IN_BW = 1
